@@ -125,6 +125,7 @@ display: none;
 .right {
   margin-top: 1.2rem;
   display: flex;
+  width: 30%;
   flex-direction: column;
   border-radius: 0.2rem;
   padding: 1.2rem 2.2rem;
@@ -439,6 +440,10 @@ display: none;
      flex-direction: column;
   }
 
+  .right {
+    width: 50%;
+  }
+
   .work {
     position: relative;
     top: 2rem;
@@ -540,6 +545,7 @@ display: none;
   .icons {
     z-index: 1;
   }
+  
 }
 
 
@@ -581,6 +587,10 @@ display: none;
     height: 100%;
   }
   
+}
+
+.right {
+  width: 100%;
 }
 
 .navbar__links {

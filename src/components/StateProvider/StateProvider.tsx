@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 
 export const StateContext = createContext({});
 
-export default function ThemeContext({children}) {
+export default function ThemeContext({children}: any) {
 
 const [theme, setTheme] = useState(true);
 

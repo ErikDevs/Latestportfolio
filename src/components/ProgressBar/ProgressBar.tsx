@@ -1,8 +1,6 @@
 // ProgressBar.js
 
-import Technology from '../technologies/technologies';
-
-function ProgressBar({progress, backgroundColor, outline}) {
+function ProgressBar({progress, backgroundColor, outline}: any) {
   // Initial progress is 0%
 
   return (

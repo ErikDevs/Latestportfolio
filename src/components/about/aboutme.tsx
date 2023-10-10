@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import { StateContext } from '../StateProvider/StateProvider'
 
+
+
 const About = () => {
 
  const {theme}: any = useContext(StateContext);
@@ -12,6 +14,7 @@ const About = () => {
 
  const inputSyles = {
     color: theme ? "#0f1624" : "#ccd8f8",
+    outline: "none"
  }
   return (
     <div id='about' className='about'>
@@ -28,9 +31,9 @@ const About = () => {
 
     <div style={styles} className='right'>
         <input style={inputSyles} type="text" placeholder='Name' />
-        <input style={inputSyles} type="email" placeholder='email-address' />
-        <input style={inputSyles} type="text" placeholder='project-idea' />
-        <textarea style={inputSyles} name="" placeholder='Brief description' id="" cols="30" rows="10"></textarea>
+        <input style={inputSyles} type="email" placeholder='Email-address' />
+        <input style={inputSyles} type="text" placeholder='Have a project-idea' />
+        <textarea style={inputSyles} name="" placeholder='Brief description' cols= {30} rows={10}></textarea>
         <button type='submit'>Submit</button>
     </div>
      </div>
