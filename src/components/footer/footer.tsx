@@ -1,6 +1,12 @@
 
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
+import {Link} from "react-scroll";
 const Footer = () => {
+  const handleSetActive = (to:any) => {
+    console.log(to)
+  }
   return (
 
     <div id='contact' className='footer'>
@@ -25,6 +31,21 @@ const Footer = () => {
             <AiFillInstagram className="link-icons" size ="2rem" />
         </div>
       </div>
+      
+       <Link
+       activeClass = "active"
+       to = "header"
+       spy = {true}
+       smooth = {true}
+       offset = {-40}
+       duration = {1000}
+       onSetActive = {handleSetActive}
+       href = "#header">
+       <div className='control'>
+       <FontAwesomeIcon icon={faArrowUp} />
+       </div>
+       </Link>
+
     </div>
   )
 }

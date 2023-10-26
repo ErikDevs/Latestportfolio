@@ -24,7 +24,7 @@ const  variants = {
 
   return (
         <>
-        <div className="header">
+        <div id='header' className="header">
         <h3>DEV_ERICK</h3>    
         <div className='buttons'>
         <button style={{backgroundColor: "transparent", outline: "none", border: "none"}}  onClick={toggleTheme}>

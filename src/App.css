@@ -188,7 +188,7 @@ display: none;
 .btn-hire {
   border: none;
   margin: 4rem 0;
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 2rem;
   background-color: transparent;
   border-radius: 0.2rem;
 
@@ -216,7 +216,8 @@ display: none;
 
 
 .footer {
-  padding: 20% 0;
+  padding: 1% 0;
+  position: relative;
 }
 
 .contact {
@@ -306,8 +307,7 @@ display: none;
   display: flex;
   flex-direction: column;
   position: relative;
-  bottom: 1rem;
-  margin: 0 0 10rem;
+  bottom: 10rem;
 }
 
 .work .title {
@@ -340,6 +340,23 @@ display: none;
   display: none;
 }
 
+.control {
+  background-color: #f79540;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 10rem;
+  z-index: 100;
+  border-radius: 1rem;
+}
+
+.control:hover {
+  transform: scale(1.1);
+}
 
 @media screen and (max-width: 960px) {
 
@@ -401,8 +418,7 @@ display: none;
 
   .technologies {
     position: relative;
-    top: 2rem;
-    margin: 0 0 10rem;
+    margin: 4rem 0 0;
   }
 
   .technology {
@@ -444,9 +460,17 @@ display: none;
   .icons {
     z-index: 1;
   }
+  .footer {
+    margin: 4rem 0 0;
+  }
+
+  .control {
+    top: 8rem;
+  }
+
+  
   
 }
-
 
 @media screen and (max-width: 480px) {
 
@@ -482,7 +506,7 @@ display: none;
   position: relative;
   left: 0;
   width: 100%;
-  top: 0;
+  top: 2rem;
   align-items: center;
   flex-direction: column;
   padding: 0;
