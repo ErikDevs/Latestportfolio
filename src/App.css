@@ -1,7 +1,7 @@
 .app {
   max-width: 100%;
   margin: auto;
-  padding: 2rem 2rem;
+  padding: 2rem 6rem 0;
 }
 
 .header {
@@ -91,7 +91,7 @@ display: none;
 }
 
 .about {
-  margin-top: 1.2rem;
+  margin-top: 5rem;
 }
 
 .about-group {
@@ -161,8 +161,7 @@ display: none;
 }
 
 .hero-left {
-  width: auto;
-  
+  width: 60%;
 }
 
 .hero-name {
@@ -307,7 +306,7 @@ display: none;
   display: flex;
   flex-direction: column;
   position: relative;
-  bottom: 5rem;
+  bottom: 1rem;
   margin: 0 0 10rem;
 }
 
