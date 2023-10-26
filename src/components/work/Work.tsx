@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Ecommerce from '../../assets/ecommerce.png';
 import Car from '../../assets/car-rental.png';
 import {motion, useAnimation} from 'framer-motion'

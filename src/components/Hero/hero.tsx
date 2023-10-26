@@ -10,10 +10,7 @@ const Hero= () => {
 
     const { theme }: any =  useContext(StateContext);
 
-    const fontStyles =  {
-      color: theme ? "#48c0a8" : "#FE0000",
-    }
-
+  
     const btnStyle = {
         outline: theme ? "1px solid #48c0a8" : "1px solid #FE0000",
         color: theme ? "#48c0a8" : "#0f1624"
