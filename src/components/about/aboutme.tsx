@@ -1,5 +1,7 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { StateContext } from '../StateProvider/StateProvider'
+import {motion, useAnimation} from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 
 
@@ -16,8 +18,35 @@ const About = () => {
     color: theme ? "#0f1624" : "#ccd8f8",
     outline: "none"
  }
+
+ const variant =  {
+   visible: {opacity: 1, scale: 1, x: 1},
+   hidden: {opacity: 0, scale: 0, x: 0}
+}
+
+const control = useAnimation()
+
+const [ref, inView] = useInView();
+
+useEffect (() => {
+
+   if (inView) {
+       
+       control.start("visible")
+    } else {
+
+       control.start("hidden");
+}
+}, [control, inView]);
+
   return (
-    <div id='about' className='about'>
+    <motion.div
+    ref={ref}
+    variants={variant}
+    initial = "hidden"
+    animate = {control}
+    transition={{duration: 0.5}}
+    id='about' className='about'>
      <h3>About Me </h3>
      <hr />
   
@@ -38,7 +67,7 @@ const About = () => {
     </div>
      </div>
 
-    </div>
+    </motion.div>
   )
 }
 

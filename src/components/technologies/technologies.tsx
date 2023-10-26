@@ -1,10 +1,41 @@
-
 import ProgressBar from '../ProgressBar/ProgressBar';
+import {motion, useAnimation} from "framer-motion";
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+
+
 
 
 const Technology = () => {
+    const variant =  {
+        visible: {opacity: 1, scale: 1, x: 1},
+        hidden: {opacity: 0, scale: 0, x: 0}
+    }
+    
+    const control = useAnimation()
+    
+    const [ref, inView] = useInView();
+    
+    useEffect (() => {
+    
+        if (inView) {
+            
+            control.start("visible")
+         } else {
+    
+            control.start("hidden");
+     }
+    }, [control, inView]);
+
   return (
-    <div id='technology' className='technologies'>
+    <motion.div
+    ref={ref}
+    variants={variant}
+    initial="hidden"
+    animate = {control}
+    transition={{duration: 0.5}}
+
+    id='technology' className='technologies'>
         <h2>Tech Stack</h2> 
         <hr />
         <h3 className='sub_heading'>Frontend</h3>
@@ -55,8 +86,9 @@ const Technology = () => {
         <div className='technology'></div>
         </div>
 
-    </div>
-  )
+    </motion.div>
+    
+    )
 }
 
 export default Technology;

@@ -9,6 +9,8 @@ import Technology from './components/technologies/technologies';
 import About from './components/about/aboutme';
 import Footer from './components/footer/footer';
 
+
+
 function App() {
 
   const {theme}: any = useContext(StateContext);
@@ -21,15 +23,15 @@ function App() {
 
 
   return (
-   <div className='app' style={themeStyles}>
+   <div 
+   
+   className='app' style={themeStyles} >
      <Header />
      <Hero />
      <Projects />
      <Technology />
      <About />
      <Footer />
-
-
    </div>
   )
 }
